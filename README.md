@@ -3,121 +3,121 @@
 </p>
 
 <p align="center">
-  <a href="https://arthwr14.github.io/hyperium-launcher/"><img src="https://img.shields.io/badge/Baixar_agora-site_oficial-4a8bff?style=for-the-badge&labelColor=2f6fe6" alt="Baixar agora"></a>
+  <a href="https://arthwr14.github.io/hyperium-launcher/"><img src="https://img.shields.io/badge/Download_now-official_site-4a8bff?style=for-the-badge&labelColor=2f6fe6" alt="Download now"></a>
   &nbsp;
-  <a href="https://github.com/arthwr14/hyperium-launcher/releases/latest"><img src="https://img.shields.io/github/v/release/arthwr14/hyperium-launcher?style=for-the-badge&label=vers%C3%A3o&color=11131a&labelColor=1c2030" alt="Versão"></a>
+  <a href="https://github.com/arthwr14/hyperium-launcher/releases/latest"><img src="https://img.shields.io/github/v/release/arthwr14/hyperium-launcher?style=for-the-badge&label=version&color=11131a&labelColor=1c2030" alt="Version"></a>
   &nbsp;
   <a href="https://github.com/arthwr14/hyperium-launcher/releases"><img src="https://img.shields.io/github/downloads/arthwr14/hyperium-launcher/total?style=for-the-badge&label=downloads&color=11131a&labelColor=1c2030" alt="Downloads"></a>
   &nbsp;
-  <a href="https://dsc.gg/hypernotwork"><img src="https://img.shields.io/badge/Discord-entrar-5865F2?style=for-the-badge&logo=discord&logoColor=white&labelColor=1c2030" alt="Discord"></a>
+  <a href="https://dsc.gg/hypernotwork"><img src="https://img.shields.io/badge/Discord-join-5865F2?style=for-the-badge&logo=discord&logoColor=white&labelColor=1c2030" alt="Discord"></a>
 </p>
 
 <p align="center">
-  <b>Mais de 80 mods de PvP, HUD e desempenho, já configurados de fábrica.</b><br>
-  Instale, entre na sua conta e jogue. Grátis para Windows, macOS e Linux.
+  <b>80+ PvP, HUD and performance mods, configured out of the box.</b><br>
+  Install, sign in and play. Free for Windows, macOS and Linux.
 </p>
 
 <br>
 
 <p align="center">
-  <img src="docs/assets/launcher-bg1.webp" alt="Tela inicial do Hyperium Launcher" width="88%">
+  <img src="docs/assets/launcher-bg1.webp" alt="Hyperium Launcher home screen" width="88%">
 </p>
 
 ## Download
 
-| | Sistema | Arquivo |
+| | System | File |
 |:-:|---|---|
-| <img src="docs/assets/windows.svg" width="20"> | **Windows** 10 e 11 | [`Hyperium-Setup.exe`](https://github.com/arthwr14/hyperium-launcher/releases/latest) |
-| <img src="https://cdn.simpleicons.org/apple/a4acbc" width="20"> | **macOS** (Apple Silicon, M1 em diante) | [`Hyperium-Launcher-arm64.dmg`](https://github.com/arthwr14/hyperium-launcher/releases/latest) |
+| <img src="docs/assets/windows.svg" width="20"> | **Windows** 10 and 11 | [`Hyperium-Setup.exe`](https://github.com/arthwr14/hyperium-launcher/releases/latest) |
+| <img src="https://cdn.simpleicons.org/apple/a4acbc" width="20"> | **macOS** (Apple Silicon, M1 and later) | [`Hyperium-Launcher-arm64.dmg`](https://github.com/arthwr14/hyperium-launcher/releases/latest) |
 | <img src="https://cdn.simpleicons.org/apple/a4acbc" width="20"> | **macOS** (Intel) | [`Hyperium-Launcher-x64.dmg`](https://github.com/arthwr14/hyperium-launcher/releases/latest) |
 | <img src="https://cdn.simpleicons.org/ubuntu/E95420" width="20"> | **Linux** Ubuntu / Debian | [`Hyperium-Launcher-amd64.deb`](https://github.com/arthwr14/hyperium-launcher/releases/latest) |
-| <img src="https://cdn.simpleicons.org/linux/f5c542" width="20"> | **Linux** (outras distros) | [`Hyperium-Launcher-x86_64.AppImage`](https://github.com/arthwr14/hyperium-launcher/releases/latest) |
+| <img src="https://cdn.simpleicons.org/linux/f5c542" width="20"> | **Linux** (other distros) | [`Hyperium-Launcher-x86_64.AppImage`](https://github.com/arthwr14/hyperium-launcher/releases/latest) |
 
 > [!TIP]
-> O jeito mais fácil é pelo site: **[arthwr14.github.io/hyperium-launcher](https://arthwr14.github.io/hyperium-launcher/)**. Ele já mostra o download certo para o seu sistema.
+> The easiest way is through the website: **[arthwr14.github.io/hyperium-launcher](https://arthwr14.github.io/hyperium-launcher/)**. It picks the right download for your system.
 
-## Recursos
+## Features
 
 <table>
   <tr>
     <td width="33%" valign="top">
-      <h3>⚔️ Feito para PvP</h3>
-      Animações da 1.7, Hit Color, Hitboxes, Reach Display, Combo Counter, Toggle Sprint e correção do atraso do mouse.
+      <h3>⚔️ Built for PvP</h3>
+      1.7 animations, Hit Color, Hitboxes, Reach Display, Combo Counter, Toggle Sprint and a mouse delay fix.
     </td>
     <td width="33%" valign="top">
-      <h3>🧩 HUD do seu jeito</h3>
-      Keystrokes, CPS, FPS, Armor Status, Minimap e muito mais, posicionados no editor de HUD com ímã e guias.
+      <h3>🧩 Your HUD, your way</h3>
+      Keystrokes, CPS, FPS, Armor Status, Minimap and much more, placed with a HUD editor that has snapping and guides.
     </td>
     <td width="33%" valign="top">
-      <h3>⚡ Mais FPS</h3>
-      OptiFine integrado e um mod de desempenho que corta o que você não vê e acelera a troca de mundos.
+      <h3>⚡ More FPS</h3>
+      Built-in OptiFine plus a performance mod that skips what you can't see and speeds up world switching.
     </td>
   </tr>
   <tr>
     <td valign="top">
-      <h3>🎨 Visual moderno</h3>
-      Texturas novas do Minecraft no 1.8.9, camadas de skin em 3D, Item Physics e painel de mods em cartões.
+      <h3>🎨 Modern look</h3>
+      New Minecraft textures on 1.8.9, 3D skin layers, Item Physics and a card-based mod menu.
     </td>
     <td valign="top">
-      <h3>👥 Jogue com amigos</h3>
-      Ícone do Hyperium ao lado do nome de quem usa o client, mensagens entre jogadores e Discord Presence.
+      <h3>👥 Play with friends</h3>
+      A Hyperium icon next to the name of everyone using the client, player-to-player messages and Discord Presence.
     </td>
     <td valign="top">
-      <h3>🔄 Sem complicação</h3>
-      Baixa o Java e o Minecraft sozinho. No Windows, as versões novas chegam automaticamente.
+      <h3>🔄 No hassle</h3>
+      Downloads Java and Minecraft for you. On Windows, new versions install automatically.
     </td>
   </tr>
 </table>
 
-## O visual do 26.3, o PvP do 1.8.9
+## The look of 26.3, the PvP of 1.8.9
 
-Texturas, armaduras, itens e menus das versões novas do Minecraft. O combate, o knockback e as hitboxes continuam os do 1.8.9.
-
-<p align="center">
-  <img src="docs/assets/game-world.webp" alt="Mundo com as texturas do 26.3" width="49%">
-  <img src="docs/assets/game-front.webp" alt="Armadura e espada com o visual novo" width="49%">
-</p>
-
-## Painel de mods
-
-Aperte <kbd>Right Shift</kbd> dentro do jogo para ligar, desligar e ajustar qualquer mod.
+Textures, armor, items and menus from the latest Minecraft versions. Combat, knockback and hitboxes stay exactly like 1.8.9.
 
 <p align="center">
-  <img src="docs/assets/mods.webp" alt="Painel de mods" width="88%">
+  <img src="docs/assets/game-world.webp" alt="World with 26.3 textures" width="49%">
+  <img src="docs/assets/game-front.webp" alt="Armor and sword with the new look" width="49%">
 </p>
 
-## Editor de HUD
+## Mod menu
 
-Arraste, redimensione e alinhe cada elemento da tela. <kbd>Ctrl</kbd>+<kbd>Z</kbd> desfaz.
+Press <kbd>Right Shift</kbd> in game to toggle and tweak any mod.
 
 <p align="center">
-  <img src="docs/assets/hud-editor.webp" alt="Editor de HUD" width="88%">
+  <img src="docs/assets/mods.webp" alt="Mod menu" width="88%">
 </p>
 
-## Dúvidas
+## HUD editor
+
+Drag, resize and align every element on screen. <kbd>Ctrl</kbd>+<kbd>Z</kbd> undoes.
+
+<p align="center">
+  <img src="docs/assets/hud-editor.webp" alt="HUD editor" width="88%">
+</p>
+
+## FAQ
 
 <details>
-<summary><b>O Windows mostrou “O Windows protegeu o computador”</b></summary>
+<summary><b>Windows says “Windows protected your PC”</b></summary>
 <br>
-O aviso aparece com programas novos que ainda não têm assinatura digital paga. Clique em <b>Mais informações</b> → <b>Executar assim mesmo</b>.
+This warning shows up for new programs that don't have a paid code-signing certificate yet. Click <b>More info</b> → <b>Run anyway</b>.
 </details>
 
 <details>
-<summary><b>No Mac aparece que o app não pode ser aberto</b></summary>
+<summary><b>macOS says the app can't be opened</b></summary>
 <br>
-Na primeira vez, clique com o <b>botão direito</b> no Hyperium Launcher → <b>Abrir</b> e confirme.
+The first time, <b>right-click</b> Hyperium Launcher → <b>Open</b> and confirm.
 </details>
 
 <details>
-<summary><b>Preciso instalar o Java ou o Forge?</b></summary>
+<summary><b>Do I need to install Java or Forge?</b></summary>
 <br>
-Não. O launcher baixa o Java e o Minecraft 1.8.9 sozinho na primeira vez que você clica em Jogar.
+No. The launcher downloads Java and Minecraft 1.8.9 by itself the first time you click Play.
 </details>
 
 <details>
-<summary><b>Como abro o painel de mods?</b></summary>
+<summary><b>How do I open the mod menu?</b></summary>
 <br>
-Dentro do jogo, aperte <kbd>Right Shift</kbd>. A tecla pode ser trocada nas configurações do painel.
+In game, press <kbd>Right Shift</kbd>. You can change the key in the menu settings.
 </details>
 
 <br>
@@ -129,4 +129,4 @@ Dentro do jogo, aperte <kbd>Right Shift</kbd>. A tecla pode ser trocada nas conf
   <a href="https://www.instagram.com/4rth3n">Instagram</a>
 </p>
 
-<p align="center"><sub>© arthwr14. Todos os direitos reservados. Este repositório contém apenas os instaladores e o site.<br>Hyperium não é afiliado à Mojang Studios nem à Microsoft.</sub></p>
+<p align="center"><sub>© arthwr14. All rights reserved. This repository only contains the installers and the website.<br>Hyperium is not affiliated with Mojang Studios or Microsoft.</sub></p>
