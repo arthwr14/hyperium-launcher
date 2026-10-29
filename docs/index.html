@@ -131,6 +131,12 @@
   .stat { background: var(--bg-2); padding: 26px 20px; text-align: center; }
   .stat b { display: block; font-size: 30px; font-weight: 800; letter-spacing: -0.02em; }
   .stat span { color: var(--muted); font-size: 14px; }
+  .stat .os-icons { display: flex; justify-content: center; align-items: center; gap: 14px; height: 45px; }
+  .stat .os-icons svg { width: 26px; height: 26px; }
+  .pill .sep { opacity: .45; }
+  .pill [data-online] { color: var(--text); }
+  .mac-help { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.5; }
+  .mac-help b { color: var(--text-2); font-weight: 600; }
   @media (max-width: 760px) { .stats { grid-template-columns: repeat(2, 1fr); } }
 
   /* ── Sections ── */
@@ -253,7 +259,7 @@
 <header class="hero">
   <div class="wrap">
     <img class="hero-logo" src="assets/logo.png" alt="Hyperium" width="400" height="512">
-    <span class="pill"><i></i> Minecraft 1.8.9 · <span data-version>versão mais recente</span></span>
+    <span class="pill"><i></i> <span id="online-wrap" hidden><span data-online></span> online agora <span class="sep">·</span></span> Minecraft 1.8.9 <span class="sep">·</span> <span data-version>versão mais recente</span></span>
     <h1>O client de PvP <span class="grad">pronto para jogar</span></h1>
     <p class="lead">Mais de 80 mods de PvP, HUD e desempenho, já configurados de fábrica. Instale, entre na sua conta e jogue.</p>
     <div class="cta-row">
@@ -268,7 +274,14 @@
     <div class="stats reveal">
       <div class="stat"><b>80+</b><span>mods incluídos</span></div>
       <div class="stat"><b>1.7</b><span>animações clássicas</span></div>
-      <div class="stat"><b>3</b><span>sistemas suportados</span></div>
+      <div class="stat">
+        <div class="os-icons" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="#4a8bff"><path d="M3 3h8.5v8.5H3zM12.5 3H21v8.5h-8.5zM3 12.5h8.5V21H3zM12.5 12.5H21V21h-8.5z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#eef1f6"><path d="M16.37 12.6c.02 2.6 2.28 3.47 2.3 3.48-.02.06-.36 1.24-1.19 2.45-.72 1.05-1.47 2.1-2.65 2.12-1.16.02-1.53-.69-2.86-.69-1.33 0-1.74.67-2.84.71-1.14.04-2-1.14-2.73-2.18-1.48-2.15-2.62-6.07-1.09-8.72.76-1.31 2.12-2.15 3.6-2.17 1.12-.02 2.18.76 2.87.76.68 0 1.97-.94 3.32-.8.57.02 2.16.23 3.18 1.73-.08.05-1.9 1.11-1.88 3.31zM14.2 4.63c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.55 1.31-.56.64-1.05 1.68-.92 2.67.97.08 1.96-.49 2.57-1.22z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#f5c542"><path d="M12.5 2c-2 0-3.3 1.6-3.3 4.3 0 1.3.2 2.2-.5 3.5-.8 1.5-2.6 3.6-2.9 6.2-.2 1.3.2 2.4.7 3-.6.4-1.7.8-1.6 1.6.1.9 1.6.8 2.6 1.2 1 .4 1.8.6 2.4.1.4-.3.6-.7 1.4-.8.9-.1 1.9-.1 2.9.1.6.1.9.6 1.4.9.8.4 1.9.2 2.6-.4.8-.7 2.4-1.1 2.5-1.9.1-.7-.8-1.1-1.3-1.5.6-1 .7-2.5.2-3.9-.6-1.9-2.2-3.5-2.8-4.9-.6-1.4-.3-2.7-.5-4.1-.3-2-1.8-3.4-3.8-3.4z"/></svg>
+        </div>
+        <span>Windows, macOS e Linux</span>
+      </div>
       <div class="stat"><b>100%</b><span>grátis</span></div>
     </div>
   </div>
@@ -368,7 +381,7 @@
     <div class="dl-grid">
       <div class="dl reveal" data-os="win">
         <div class="dl-head">
-          <svg viewBox="0 0 24 24" fill="#4a8bff"><path d="M3 5.1 10.4 4v7.1H3V5.1zm0 13.8 7.4 1.1v-7H3v5.9zm8.3 1.2L21 21.5v-8.4h-9.7v7zm0-16.2v7.2H21V2.5l-9.7 1.4z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#4a8bff"><path d="M3 3h8.5v8.5H3zM12.5 3H21v8.5h-8.5zM3 12.5h8.5V21H3zM12.5 12.5H21V21h-8.5z"/></svg>
           <div><h3>Windows</h3><small>Windows 10 e 11 · 64 bits</small></div>
           <span class="tag-current">Seu sistema</span>
         </div>
@@ -383,9 +396,10 @@
           <span class="tag-current">Seu sistema</span>
         </div>
         <div class="dl-btns">
-          <a class="dl-btn" data-asset="macArm" href="https://github.com/arthwr14/hyperium-launcher/releases/latest">Apple Silicon (M1 em diante) <em data-size="macArm"></em></a>
-          <a class="dl-btn alt" data-asset="macIntel" href="https://github.com/arthwr14/hyperium-launcher/releases/latest">Intel <em data-size="macIntel"></em></a>
+          <a class="dl-btn" id="btn-macArm" data-asset="macArm" href="https://github.com/arthwr14/hyperium-launcher/releases/latest">Apple Silicon (M1 em diante) <em data-size="macArm"></em></a>
+          <a class="dl-btn alt" id="btn-macIntel" data-asset="macIntel" href="https://github.com/arthwr14/hyperium-launcher/releases/latest">Intel <em data-size="macIntel"></em></a>
         </div>
+        <p class="mac-help">Não sabe qual? Abra o menu da Apple &gt; <b>Sobre este Mac</b>. <b>Chip Apple M…</b> é Apple Silicon; <b>Processador Intel</b> é Intel.</p>
       </div>
       <div class="dl reveal" data-os="linux">
         <div class="dl-head">
@@ -470,7 +484,7 @@
       deb: /\.deb$/i
     };
     var LABELS = { win: 'Baixar para Windows', mac: 'Baixar para macOS', linux: 'Baixar para Linux' };
-    var PRIMARY = { win: 'win', mac: 'macArm', linux: 'appimage' };
+    var PRIMARY = { win: 'win', mac: null, linux: 'appimage' }; // Mac: depende do processador (macArchitecture)
 
     document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -495,9 +509,75 @@
 
     function mb(bytes) { return Math.round(bytes / 1048576) + ' MB'; }
 
-    fetch('https://api.github.com/repos/' + REPO + '/releases/latest', { headers: { Accept: 'application/vnd.github+json' } })
-      .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
-      .then(function (rel) {
+    // Processador do Mac. Os navegadores dizem "Intel Mac OS X" ate nos Macs com chip Apple, entao:
+    // 1) Chrome/Edge informam a arquitetura; 2) a placa de video: o nome, ou o formato de textura ASTC, que so os
+    // chips Apple suportam. Sem certeza, devolve null e a pessoa escolhe.
+    function macArchitecture() {
+      var hint = navigator.userAgentData && navigator.userAgentData.getHighEntropyValues
+        ? navigator.userAgentData.getHighEntropyValues(['architecture']).then(function (v) {
+            return v.architecture === 'arm' ? 'macArm' : v.architecture === 'x86' ? 'macIntel' : null;
+          }).catch(function () { return null; })
+        : Promise.resolve(null);
+      return hint.then(function (arch) {
+        if (arch) return arch;
+        try {
+          var gl = document.createElement('canvas').getContext('webgl');
+          if (!gl) return null;
+          var dbg = gl.getExtension('WEBGL_debug_renderer_info');
+          var gpu = dbg ? String(gl.getParameter(dbg.UNMASKED_RENDERER_WEBGL)) : '';
+          if (/Apple M\d/i.test(gpu)) return 'macArm';
+          if (/Intel|AMD|Radeon|NVIDIA|GeForce/i.test(gpu)) return 'macIntel';
+          var ext = gl.getSupportedExtensions() || [];
+          if (ext.indexOf('WEBGL_compressed_texture_astc') >= 0) return 'macArm';
+          if (/Apple GPU/i.test(gpu) && ext.length) return 'macIntel';
+        } catch (e) { /* sem WebGL */ }
+        return null;
+      });
+    }
+
+    // quantos launchers estao abertos agora (o mesmo numero que aparece no launcher)
+    function refreshOnline() {
+      if (document.hidden) return;
+      fetch('https://hyperium-d4a34-default-rtdb.firebaseio.com/presence.json?shallow=true')
+        .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+        .then(function (d) {
+          var n = d ? Object.keys(d).length : 0;
+          document.querySelectorAll('[data-online]').forEach(function (el) { el.textContent = n.toLocaleString('pt-BR'); });
+          document.getElementById('online-wrap').hidden = false;
+        })
+        .catch(function () { /* sem o contador: a pilula mostra so a versao */ });
+    }
+    refreshOnline();
+    setInterval(refreshOnline, 30000);
+    document.addEventListener('visibilitychange', refreshOnline);
+
+    var macArch = os === 'mac' ? macArchitecture() : Promise.resolve(null);
+
+    Promise.all([
+      fetch('https://api.github.com/repos/' + REPO + '/releases/latest', { headers: { Accept: 'application/vnd.github+json' } })
+        .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); }),
+      macArch
+    ])
+      .then(function (res) {
+        var rel = res[0], arch = res[1];
+        if (os === 'mac') {
+          PRIMARY.mac = arch;
+          if (arch) {
+            // o botao do processador detectado vai para cima e fica em destaque no cartao do Mac
+            var mine = document.getElementById('btn-' + arch);
+            var other = document.getElementById(arch === 'macArm' ? 'btn-macIntel' : 'btn-macArm');
+            mine.classList.remove('alt'); other.classList.add('alt');
+            mine.parentNode.insertBefore(mine, mine.parentNode.firstChild);
+            LABELS.mac = arch === 'macArm' ? 'Baixar para macOS (Apple Silicon)' : 'Baixar para macOS (Intel)';
+            document.getElementById('hero-label').textContent = LABELS.mac;
+            document.getElementById('final-label').textContent = LABELS.mac;
+          } else {
+            // sem certeza do processador: o botao leva para a escolha
+            document.getElementById('hero-btn').href = '#download';
+            document.getElementById('final-btn').href = '#download';
+            document.getElementById('hero-meta').textContent = 'Escolha entre Apple Silicon e Intel';
+          }
+        }
         var found = {};
         (rel.assets || []).forEach(function (a) {
           Object.keys(PATTERNS).forEach(function (k) { if (!found[k] && PATTERNS[k].test(a.name)) found[k] = a; });
@@ -512,11 +592,13 @@
           var d = new Date(rel.published_at).toLocaleDateString('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' });
           document.getElementById('release-date').textContent = 'Versão ' + version + ', lançada em ' + d + ' · ';
         }
-        if (os && found[PRIMARY[os]]) {
+        if (os && PRIMARY[os] && found[PRIMARY[os]]) {
           var main = found[PRIMARY[os]];
           document.getElementById('hero-btn').href = main.browser_download_url;
           document.getElementById('final-btn').href = main.browser_download_url;
-          document.getElementById('hero-meta').textContent = 'v' + version + ' · ' + mb(main.size) + ' · Grátis';
+          document.getElementById('hero-meta').textContent = os === 'mac'
+            ? 'v' + version + ' · ' + (PRIMARY.mac === 'macArm' ? 'Apple Silicon' : 'Intel') + ' · ' + mb(main.size)
+            : 'v' + version + ' · ' + mb(main.size) + ' · Grátis';
         }
       })
       .catch(function () { /* sem a API, os botoes levam para a pagina da release */ });
