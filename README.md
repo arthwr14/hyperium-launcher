@@ -69,6 +69,15 @@
   </tr>
 </table>
 
+## O visual do 26.3, o PvP do 1.8.9
+
+Texturas, armaduras, itens e menus das versões novas do Minecraft. O combate, o knockback e as hitboxes continuam os do 1.8.9.
+
+<p align="center">
+  <img src="docs/assets/game-world.webp" alt="Mundo com as texturas do 26.3" width="49%">
+  <img src="docs/assets/game-front.webp" alt="Armadura e espada com o visual novo" width="49%">
+</p>
+
 ## Painel de mods
 
 Aperte <kbd>Right Shift</kbd> dentro do jogo para ligar, desligar e ajustar qualquer mod.
