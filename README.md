@@ -20,7 +20,7 @@
 <br>
 
 <p align="center">
-  <img src="docs/assets/launcher.webp" alt="Tela inicial do Hyperium Launcher" width="88%">
+  <img src="docs/assets/launcher-bg1.webp" alt="Tela inicial do Hyperium Launcher" width="88%">
 </p>
 
 ## Download

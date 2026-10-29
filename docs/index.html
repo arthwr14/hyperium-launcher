@@ -117,14 +117,45 @@
   .cta-meta a { color: var(--text-2); border-bottom: 1px solid var(--line-hi); }
   .cta-meta a:hover { color: var(--text); }
 
+  .tour-tabs {
+    display: inline-flex; gap: 4px; margin: 56px auto 0; padding: 5px; border-radius: 13px;
+    background: rgba(255,255,255,0.04); border: 1px solid var(--line);
+  }
+  .tour-tabs button {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 9px 16px; border: 0; border-radius: 9px; background: none; cursor: pointer;
+    color: var(--text-2); font: 600 14px/1 Inter, system-ui, sans-serif; transition: background .2s, color .2s;
+  }
+  .tour-tabs button svg { width: 15px; height: 15px; }
+  .tour-tabs button:hover { color: var(--text); }
+  .tour-tabs button[aria-selected="true"] { background: var(--accent); color: #fff; box-shadow: 0 6px 18px rgba(74,139,255,0.35); }
+  @media (max-width: 520px) { .tour-tabs button { padding: 9px 11px; font-size: 13px; } .tour-tabs button svg { display: none; } }
+  .tour-caption { margin: 14px auto 0; color: var(--muted); font-size: 14px; min-height: 22px; }
+  .shot-frame { position: relative; aspect-ratio: 1500 / 952; }
+  .shot-frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity .35s var(--ease); }
+  .shot-frame img:not(.on) { opacity: 0; }
+
+  .bg-grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 28px; align-items: center; margin-top: 48px; }
+  @media (max-width: 900px) { .bg-grid { grid-template-columns: 1fr; } }
+  .bg-stage { border-radius: var(--r-lg); overflow: hidden; border: 1px solid var(--line-hi); box-shadow: 0 30px 80px rgba(0,0,0,0.5); }
+  .bg-list { display: grid; gap: 12px; }
+  .bg-opt {
+    display: grid; grid-template-columns: 132px 1fr; gap: 16px; align-items: center; text-align: left;
+    padding: 10px; border-radius: 14px; cursor: pointer; color: inherit; font: inherit;
+    background: var(--surface); border: 1px solid var(--line); transition: border-color .2s, background .2s, transform .2s var(--ease);
+  }
+  .bg-opt:hover { border-color: var(--line-hi); transform: translateX(3px); }
+  .bg-opt[aria-pressed="true"] { border-color: var(--accent-line); background: linear-gradient(180deg, var(--surface-hi), var(--surface)); box-shadow: 0 0 0 1px var(--accent-line); }
+  .bg-opt img { width: 132px; height: 77px; object-fit: cover; border-radius: 9px; }
+  .bg-opt b { display: block; font-size: 16px; }
+  .bg-opt span { color: var(--muted); font-size: 13px; }
+  @media (max-width: 520px) { .bg-opt { grid-template-columns: 96px 1fr; } .bg-opt img { width: 96px; height: 56px; } }
+
   .shot {
-    margin: 64px auto 0; width: 100%; max-width: 1040px; border-radius: var(--r-lg); overflow: hidden;
+    margin: 22px auto 0; width: 100%; max-width: 1040px; border-radius: var(--r-lg); overflow: hidden;
     border: 1px solid var(--line-hi);
     box-shadow: 0 0 0 1px rgba(0,0,0,0.5), 0 40px 120px rgba(0,0,0,0.6), 0 0 120px rgba(74,139,255,0.16);
-    transform: perspective(1600px) rotateX(6deg);
-    transition: transform .8s var(--ease);
   }
-  .shot:hover { transform: perspective(1600px) rotateX(0deg); }
 
   /* ── Stats ── */
   .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; margin: 72px 0 0; background: var(--line); border: 1px solid var(--line); border-radius: var(--r-lg); overflow: hidden; }
@@ -269,7 +300,17 @@
       </a>
       <div class="cta-meta"><span id="hero-meta">Grátis · Windows, macOS e Linux</span> · <a href="#download">Outros sistemas</a></div>
     </div>
-    <img class="shot" src="assets/launcher.webp" alt="Tela inicial do Hyperium Launcher" width="1500" height="952">
+    <div class="tour-tabs" role="tablist" aria-label="Telas do launcher">
+      <button role="tab" aria-selected="true" data-shot="play"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 20 12 6 21 6 3"/></svg>Jogar</button>
+      <button role="tab" aria-selected="false" data-shot="servers"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/></svg>Servidores</button>
+      <button role="tab" aria-selected="false" data-shot="settings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>Configurações</button>
+    </div>
+    <p class="tour-caption" id="tour-caption">Sua conta, suas estatísticas e o botão de jogar, num lugar só.</p>
+    <div class="shot shot-frame">
+      <img class="on" data-shot="play" src="assets/launcher-bg1.webp" alt="Tela inicial do Hyperium Launcher" width="1500" height="952">
+      <img data-shot="servers" src="assets/launcher-servers.webp" alt="Lista de servidores do Hyperium Launcher" width="1500" height="952">
+      <img data-shot="settings" src="assets/launcher-settings.webp" alt="Configurações do Hyperium Launcher" width="1500" height="952">
+    </div>
 
     <div class="stats reveal">
       <div class="stat"><b>80+</b><span>mods incluídos</span></div>
@@ -325,6 +366,26 @@
         <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg></div>
         <h3>Sempre atualizado</h3>
         <p>No Windows o launcher se atualiza sozinho, e em todos os sistemas ele baixa o Java certo para você. Sem instalar nada além do Hyperium.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="fundos">
+    <div class="center reveal">
+      <div class="eyebrow">Personalização</div>
+      <h2>Escolha o clima do seu launcher</h2>
+      <p class="sub">Três fundos animados em vídeo. Troque quando quiser em Configurações &gt; Aparência.</p>
+    </div>
+    <div class="bg-grid reveal">
+      <div class="bg-stage shot-frame">
+        <img class="on" data-bg="bg1" src="assets/launcher-bg1.webp" alt="Launcher com o fundo Cavernas Brilhantes" width="1500" height="952">
+        <img data-bg="bg2" src="assets/launcher-bg2.webp" alt="Launcher com o fundo Bosque de Cerejeiras" width="1500" height="952">
+        <img data-bg="bg3" src="assets/launcher-bg3.webp" alt="Launcher com o fundo Pântano Chuvoso" width="1500" height="952">
+      </div>
+      <div class="bg-list">
+        <button class="bg-opt" aria-pressed="true" data-bg="bg1"><img src="assets/thumb-bg1.webp" alt=""><div><b>Cavernas Brilhantes</b><span>Luzes quentes e água subterrânea</span></div></button>
+        <button class="bg-opt" aria-pressed="false" data-bg="bg2"><img src="assets/thumb-bg2.webp" alt=""><div><b>Bosque de Cerejeiras</b><span>Pôr do sol entre as árvores rosas</span></div></button>
+        <button class="bg-opt" aria-pressed="false" data-bg="bg3"><img src="assets/thumb-bg3.webp" alt=""><div><b>Pântano Chuvoso</b><span>Chuva leve e neblina verde</span></div></button>
       </div>
     </div>
   </section>
@@ -602,6 +663,33 @@
         }
       })
       .catch(function () { /* sem a API, os botoes levam para a pagina da release */ });
+
+    // abas do print do launcher e escolha do fundo: troca qual imagem aparece (todas ja estao carregadas)
+    var CAPTIONS = {
+      play: 'Sua conta, suas estatísticas e o botão de jogar, num lugar só.',
+      servers: 'Servidores populares com ping e jogadores em tempo real. Um clique e você está dentro.',
+      settings: 'RAM, resolução, placa de vídeo e Discord sem mexer em nenhum arquivo.'
+    };
+    function show(container, attr, value) {
+      container.querySelectorAll('img[data-' + attr + ']').forEach(function (img) {
+        img.classList.toggle('on', img.getAttribute('data-' + attr) === value);
+      });
+    }
+    var heroFrame = document.querySelector('.hero .shot-frame');
+    document.querySelectorAll('.tour-tabs button').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        document.querySelectorAll('.tour-tabs button').forEach(function (b) { b.setAttribute('aria-selected', String(b === btn)); });
+        show(heroFrame, 'shot', btn.dataset.shot);
+        document.getElementById('tour-caption').textContent = CAPTIONS[btn.dataset.shot];
+      });
+    });
+    var bgStage = document.querySelector('.bg-stage');
+    document.querySelectorAll('.bg-opt').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        document.querySelectorAll('.bg-opt').forEach(function (b) { b.setAttribute('aria-pressed', String(b === btn)); });
+        show(bgStage, 'bg', btn.dataset.bg);
+      });
+    });
 
     // animacao de entrada das secoes
     if ('IntersectionObserver' in window) {
